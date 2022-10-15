@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Sem-5</title>
+
+        <!-- favicn -->
+        <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+        <link rel="manifest" href="icon/site.webmanifest">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- CSS -->
+
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                outline: none;
+                text-align: center;
+                text-decoration: none;
+            }
+            html{
+                scroll-behavior: smooth;
+            }
+            .container .sec{
+                width: 100%;
+                min-height: 100vh;
+            }
+            table{
+                width: 100%;
+            }
+            td{
+                border: 2px solid black;
+            }
+            .free{
+                background-color: green;
+            }
+            .head{
+                background-color: black;
+                color: white;
+            }
+            #sec{
+                background-color: white;
+            }
+            #sec1{
+                position: fixed;
+                display: flex;
+                gap: 10px;
+                right: 10px;
+                bottom: 10px;
+            }
+            #sec1 div{
+                background-color: black;
+                color: white;
+                font-size: 30px;
+                padding: 15px;
+                box-sizing: content-box;
+                border-radius: 100%;
+
+            }
+            #sec1 div:active{
+                background-color: #333;
+            }
+            #sec1 div a{
+                text-decoration: none;
+                color: white;
+            }
+            #index{
+                display: none;
+            }
+            #d{
+                position: fixed;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                margin-top: 20px;
+                margin-left: -200px;
+                transition: .5s;
+            }
+            #index:checked~#d{
+                width: 50%;
+                margin-left: 0;
+                transition: .5s;
+            }
+            #d .index{
+                text-align: left;
+            }
+            #d .index a{
+                display: block;
+                color: white;
+                border: 2px solid white;
+                background-color: black;
+                padding: 20px;
+                border-radius: 0 50px 50px 0;
+                font-weight: bold;
+
+            }
+            #d .index a:active{
+                background-color: crimson;
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <div id="sec1">
+
+                <!-- INDEX -->
+
+                <div>
+                    <a href="#sec"><ion-icon name="calendar-outline"></ion-icon></a>
+                </div>
+
+                <div>
+                    <label for="index"><ion-icon name="grid-outline"></ion-icon></label>
+                </div>
+
+            </div>
+
+            <input type="checkbox" name="index" id="index">
+
+            <div id="d" class="d">
+
+                <div class="index">
+                    <a href="#sec2">PHP</a>
+                </div>
+
+                <div class="index">
+                    <a href="#sec3">JAVA</a>
+                </div>
+
+                <div class="index">
+                    <a href="#sec4">CG</a>
+                </div>
+
+                <div class="index">
+                    <a href="#sec5">DWM</a>
+                </div>
+
+                <div class="index">
+                    <a href="#sec6">PHP Lab</a>
+                </div>
+                
+                <div class="index">
+                    <a href="#sec7">JAVA Lab</a>
+                </div>
+
+                <div class="index">
+                    <a href="#sec8">CG Lab</a>
+                </div>
+
+                <div class="index">
+                    <a href="#sec9">DWM Lab</a>
+                </div>
+
+            </div>
+
+            <div id="sec" class="sec">
+                <!-- time table -->
+                <h1>Time table</h1>
+                <br>
+                <table>
+                    <tr>
+                        <td style="border: none;"></td>
+                        <td class="head"><br>Mon<br><br></td>
+                        <td class="head"><br>Tue<br><br></td>
+                        <td class="head"><br>Wed<br><br></td>
+                        <td class="head"><br>Thr<br><br></td>
+                        <td class="head"><br>Fri<br><br></td>
+                    </tr>
+                    <tr>
+                        <td class="head"><br>8:30<br><br></td>
+                        <td><br>JAVA<br><br></td>
+                        <td><br>PHP<br><br></td>
+                        <td><br>CG<br><br></td>
+                        <td class="free"></td>
+                        <td class="free"></td>
+                    </tr>
+                    <tr>
+                        <td class="head"><br>9:30<br><br></td>
+                        <td><br>DWM<br><br></td>
+                        <td><br>DWM<br><br></td>
+                        <td><br>PHP<br><br></td>
+                        <td><br>CG<br><br></td>
+                        <td><br>PHP<br><br></td>
+                    </tr>
+                    <tr>
+                        <td class="head"><br>10:30<br><br></td>
+                        <td><br>MP<br><br></td>
+                        <td><br>JAVA<br><br></td>
+                        <td><br>DWM<br><br></td>
+                        <td><br>JAVA<br><br></td>
+                        <td><br>CG<br><br></td>
+                    </tr>
+                    <tr>
+                        <td class="head"><br>11:30<br><br></td>
+                        <td><br>Cloud<br><br></td>
+                        <td class="free"></td>
+                        <td><br>Cloud<br><br></td>
+                        <td><br>DWM<br><br></td>
+                        <td><br>Cloud<br><br></td>
+                    </tr>
+                    <tr>
+                        <td class="head"><br>12:30<br><br></td>
+                        <td class="free"></td>
+                        <td rowspan="2">CG</td>
+                        <td class="free"></td>
+                        <td class="free"></td>
+                        <td class="free"></td>
+                    </tr>
+                    <tr>
+                        <td class="head"><br>1:30<br><br></td>
+                        <td><br>CG<br><br></td>
+                        
+                        <td><br>JAVA<br><br></td>
+                        <td class="free"></td>
+                        <td><br>MC<br><br></td>
+                    </tr>
+                    <tr>
+                        <td class="head"><br>2:30<br><br></td>
+                        <td rowspan="2">DWM</td>
+                        <td rowspan="2">PHP</td>
+                        <td class="free"></td>
+                        <td rowspan="2">CG</td>
+                        <td rowspan="2">DWM</td>
+                    </tr>
+                    <tr>
+                        <td class="head"><br>3:30<br><br></td>
+                        <td><br>MP<br><br></td>
+                    </tr>
+                </table>
+            </div>
+
+            
+
+            <div id="sec2" class="sec">
+
+                <!-- PHP -->
+                <h1>Programming in PHP</h1>
+                <br>
+                <table>
+                    <tr>
+                        <td>
+                            <h2>Content</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Unit-I </b><br><br>
+                            <b>Introduction to PHP </b><br>
+                            Evolution of PHP & its comparison Interfaces to External systems,  Hardware and Software requirements, PHP Scripting. Basic PHP  Development, Working of PHP scripts, Basic PHP syntax, PHP data  types.<br>
+                            <b>Displaying type information:</b> Testing for a specific data type, Changing  type with Set type, Operators, Variable manipulation, Dynamic variables  and Variable scope.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Unit-II</b> <br><br> 
+                            <b>Control Statements</b><br> 
+                            if() and elseif() condition Statement, The switch statement, Using the?  Operator, Using the while() Loop, The do while statement, Using the for()  Loop. <br><br>
+                            <b>Functions</b><br> 
+                            Function definition, Creation, Returning values, Library Functions, User defined functions, Dynamic function, default arguments, Passing  arguments to a function by value. <br><br><b>
+                            String Manipulation</b><br> 
+                            Formatting String for Presentation, Formatting String for Storage, Joining  and Splitting String, Comparing String 
+                            <br><br><b>
+                            Array  </b><br>
+                            Anatomy of an Array, Creating index based and Associative array,  Looping array using each() and foreach() loop. 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Unit-III</b><br><br><b>  
+                            Forms </b><br>
+                            Working with Forms, Super global variables, Super global array,  Importing user input, Accessing user input, Combine HTML and PHP  code, Using hidden fields, Redirecting the user. <br><br><b>
+
+                            Working with File and Directories</b><br> 
+                            Understanding file & directory, Opening and closing a file, Coping,  renaming and deleting a file, Working with directories, File Uploading &  Downloading. Generating Images with PHP: Basics computer Graphics,  Creating Image.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Unit-IV</b><br><br><b>  
+                            Database Connectivity with MySql </b><br>
+                            Introduction to RDBMS, Connection with MySql Database, Performing  basic database operation (DML) (Insert, Delete, Update, Select).
+                        </td>
+                    </tr>
+                </table>
+                
+            </div>
+
+            <div id="sec3" class="sec">
+                <!-- JAVA -->
+                <h1>Programming in Java</h1>
+                <br>
+                <table>
+                    <tr>
+                        <td>
+                            <h2>Content</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Unit-I</b><br><br>
+                            <b>Java Programming Fundamentals:</b>Introduction to Java, Stage for Java, 
+                            Origin, Challenges of Java, Java Features, Java Program Development, Object 
+                            Oriented Programming.
+                            <br><br>
+                            <b>Java Essentials:</b>Elements of Java Program, Java API, Variables and Literals, 
+                            Primitive Data Types, The String class, Variables, Constants, Operators, Scope 
+                            of Variables & Blocks, Types of Comment in Java.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Unit-II</b><br><br>
+                            <b>Control Statements:</b>Decision making statements (if, if-else, nested if, else if 
+                            ladder, switch, conditional operator), Looping statements (while, do-while, for, 
+                            nested loops), Jumping statements (Break and Continue).
+                            <br><br>
+                            <b>Classes and Objects: </b>Basic concepts of OOPS, Classes and Objects, 
+                            Modifiers, Passing arguments, Constructors, Overloaded Constructors, 
+                            Overloaded Operators, Static Class Members, Garbage Collection.
+                            <br><br>
+                            <b>Inheritance:</b>Basics of inheritance, Inheriting and Overriding Superclass 
+                            methods, Calling Superclass Constructor, Polymorphism, Abstract Classes, 
+                            Final Class.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Unit-III</b><br><br>
+                            <b>Arrays and Strings:</b>Introduction to array, Processing Array Contents, Passing 
+                            array as argument, Returning array from methods, Array of objects, 2D arrays, 
+                            Array with three or more dimensions. String class, string concatenation, 
+                            Comparing strings, Substring, Difference between String and String Buffer 
+                            class, String Tokenizer class.
+                            <br><br>
+                            <b>Interface and Packages:</b>Basics of interface, Multiple Interfaces, Multiple 
+                            Inheritance Using Interface, Multilevel Interface, Packages, Create and Access 
+                            Packages, Static Import and Package Class, Access Specifiers.
+                            
+                            <br><br>
+                            <b>Exception Handling:</b>Introduction, Try and Catch Blocks, Multiple Catch, 
+                            Nested Try, Finally, Throw Statement, Built-In Exceptions.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Unit-IV</b><br><br>
+                            <b>Multithreading:</b>Introduction, Threads in Java, Thread Creation, Lifecycle of 
+                            Thread, Joining a Thread, Thread Scheduler, Thread Priority, Thread 
+                            Synchronization.
+                            
+                            <br><br>
+                            <b>Applets:</b>Introduction, Applet Class, Applet Life Cycle, Graphics in Applet, 
+                            Event-Handling.
+                            
+                            <br><br>
+                            <b>File and I/O Streams:</b>File Class, Streams, Byte Streams, Filtered Byte 
+                            Streams, Random Access File Class, Character Streams.
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+
+            <div id="sec4" class="sec">
+
+                <!-- CG -->
+                <h1>Computer Graphics</h1>
+                <br>
+                <table>
+                    <tr>
+                        <td>
+                            <h2>Content</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b> Unit-I </b>
+                            <br><br>
+                            <b>Introduction to Computer Graphics </b>
+                            <br>
+                            Applications of Computer Graphics. Graphs and Types of Graphs 
+                            <br><br>
+                            <b>Input Devices: </b>
+                            Light Pens, Graphic Tablets, Joysticks, Track Ball, Data  Glove, Digitizers, Image Scanner. 
+                            <br><br>
+                            <b>Video Display Devices: </b>
+                            Refresh Cathode Ray Tube, Raster Scan displays,  Random Scan displays, Color CRT - monitors and Color generating  techniques (Shadow Mask, Beam Penetration), Flat-Panel Displays; 3-D  Viewing Devices, Graphics monitors and workstations, Color Models (RGB  and CMY), Lookup Table.  
+                            <br><br>
+                            <b>Introduction Virtual Reality & Environments: </b>
+                            Applications in  Engineering, Architecture, Education, Medicine, Entertainment, Science,  Training.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Unit-II</b>
+                            <br><br> 
+                            <b>Scan-conversions</b>
+                            <br> 
+                            Process and need of Scan Conversion, Scan conversion algorithms for Line,  Circle and Ellipse using direct method, Bresenham's algorithms for line &  circle and Midpoint Ellipse Algorithm along with their derivations, Area  Filling Techniques, Flood Fill Techniques, Character Generation.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Unit-III</b>
+                            <br><br>
+                            <b>2 Dimensional Graphics</b>
+                            <br>
+                            Cartesian and need of Homogeneous co-ordinate system, Geometric  transformations (Translation, Scaling, Rotation, Reflection, Shearing),  Viewing transformation and clipping (line, polygon and text) using Cohen Sutherland, Sutherland Hodgeman and Liang Barsky algorithm for clipping.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Unit-IV</b>
+                            <br><br>
+                            <b>3 Dimensional Graphics  </b>
+                            <br>
+                            Introduction to 3-dimensional Graphics: Geometric Transformations  (Translation, Scaling, Rotation), Mathematics of Projections (Parallel &  Perspective). Color Shading. Introduction to Morphing techniques.
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="sec5" class="sec">
+
+                <!-- DWM -->
+                <h1>Data Warehouse and Mining </h1>
+                <br>
+                <table>
+                    <tr>
+                        <td>
+                            <h2>Content</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b> Unit-I </b>
+                            <br><br>
+                            Need for strategic information, difference between operational and  Informational data stores 
+                            <br><br>
+                            Data warehouse definition, characteristics, Data warehouse role and  structure, OLAP Operations, Data mart, Different between data mart and  data warehouse, Approaches to build a data warehouse, Building a data  warehouse, Metadata & its types.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Unit-II</b>
+                            <br><br> 
+                            Data Pre-processing: Need, Data Summarization, Methods.  Denormalization, Multidimensional data model, Schemas for multi dimensional data (Star schema, Snowflake Schema, Fact Constellation  Schema, Difference between different schemas. 
+                            <br>
+                            Data warehouse architecture, OLAP servers, Indexing OLAP Data,  OLAP query processing, Data cube computation
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Unit-III</b>
+                            <br><br>
+                            Data Mining: Definition, Data Mining process, Data mining  methodology, Data mining tasks, Mining various Data types & issues.  Attribute-Oriented Induction, Association rule mining, Frequent itemset  mining, The Apriori Algorithm, Mining multilevel association rules.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Unit-IV</b>
+                            <br><br>
+                            Overview of classification, Classification process, Decision tree,  Decision Tree Induction, Attribute Selection Measures. Overview of  classifier’s accuracy, Evaluating classifier’s accuracy, Techniques for  accuracy estimation, Increasing the accuracy of classifier.  
+                            <br><br>
+                            Introduction to Clustering, Types of clusters, Clustering methods, Data  visualization & various data visualization tools
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="sec6" class="sec">
+
+                <!-- PHP LAB -->
+                <h1>Programming in PHP Laboratory</h1>
+                <br>
+                <table>
+                    <tr>
+                        <td>
+                            <h2>Sno.</h2>
+                        </td>
+                        <td>
+                            <h2>Content</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>1.</b></td>
+                        <td>
+                            Take values from the user and compute sum, subtraction, multiplication,  division and exponent of value of the variables.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>2.</b></td>
+                        <td>
+                            Write a program to find area of following shapes: circle, rectangle, triangle,  square, trapezoid and parallelogram.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>3.</b></td>
+                        <td>
+                            Compute and print roots of quadratic equation.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>4.</b></td>
+                        <td>
+                            Write a program to determine whether a triangle is isosceles or not?
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>5.</b></td>
+                        <td>
+                            Print multiplication table of a number input by the user.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>6.</b></td>
+                        <td>
+                            Calculate sum of natural numbers from one to n number.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>7.</b></td>
+                        <td>
+                            Print Fibonacci series up to n numbers e.g. 0 1 1 2 3 5 8 13 21…..n
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>8.</b></td>
+                        <td>
+                            Write a program to find the factorial of any number.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>9.</b></td>
+                        <td>
+                            Determine prime numbers within a specific range.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>10.</b></td>
+                        <td>
+                            Write a program to compute, the Average and Grade of students marks.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>11.</b></td>
+                        <td>
+                            Compute addition, subtraction and multiplication of a matrix.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>12.</b></td>
+                        <td>
+                            Count total number of vowels in a word “Develop & Empower Individuals”.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>13.</b></td>
+                        <td>
+                            Determine whether a string is palindrome or not? 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>14.</b></td>
+                        <td>
+                            Display word after Sorting in alphabetical order.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>15.</b></td>
+                        <td>
+                            Check whether a number is in a given range using functions.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>16.</b></td>
+                        <td>
+                            Write a program accepts a string and calculates number of upper case letters  and lower case letters available in that string.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>17.</b></td>
+                        <td>
+                            Design a program to reverse a string word by word.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>18.</b></td>
+                        <td>
+                            Write a program to create a login form. On submitting the form, the user  should navigate to profile page.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>19.</b></td>
+                        <td>
+                            Design front page of a college or department using graphics method.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>20.</b></td>
+                        <td>
+                            Write a program to upload and download files.
+                        </td>
+                    </tr>
+                    
+                </table>
+            </div>
+
+            <div id="sec7" class="sec">
+                <!-- JAVA LAB -->
+                <h1>Programming in JAVA Laboratory</h1>
+                <br>
+                <table>
+                    <tr>
+                        <td>Sno.</td>
+                        <td>Content</td>
+                    </tr>
+                    <tr>
+                        <td>1.</td>
+                        <td>
+                            Write a program to perform following operations on two numbers input by the user: <br>
+                            1) Addition 2) subtraction 3) multiplication 4) division
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>
+                            Write a Java program to print result of the following operations. <br>
+                            1. -15 +58 * 45 <br>
+                            2. (35+8) % 6 <br>
+                            3. 24 + -5*3 / 7 <br>
+                            4. 15 + 18 / 3 * 2 - 9 % 3
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td>
+                            Write a Java program to compute area of: <br>
+                            1) Circle2) rectangle 3) triangle 4) square
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4.</td>
+                        <td>
+                            Write a program to convert temperature from Fahrenheit to Celsius degree using Java. 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5.</td>
+                        <td>
+                            Write a program through Java that reads a number in inches, converts it to meters.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6.</td>
+                        <td>
+                            Write a program to convert minutes into a number of years and days.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>7.</td>
+                        <td>
+                            Write a Java program that prints current time in GMT.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>8.</td>
+                        <td>
+                            Design a program in Java to solve quadratic equations using if, if else
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>9.</td>
+                        <td>
+                            Write a Java program to determine greatest number of three numbers.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10.</td>
+                        <td>
+                            Write program that gets a number from the user and generates an integer between 1 and 7 subsequently should display the name of the weekday as per that number.
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>11.</td>
+                        <td>
+                            Construct a Java program to find the number of days in a month.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>12.</td>
+                        <td>
+                            Write a program to sum values of an Single Dimensional array.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>13.</td>
+                        <td>
+                            Design & execute a program in Java to sort a numeric array and a string array.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>14.</td>
+                        <td>
+                            Calculate the average value of array elements through Java Program.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>15.</td>
+                        <td>
+                            Write a Java program to test if an array contains a specific value.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>16.</td>
+                        <td>
+                            Find the index of an array element by writing a program in Java.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>17.</td>
+                        <td>
+                            Write a Java program to remove a specific element from an array.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>18.</td>
+                        <td>
+                            Design a program to copy an array by iterating the array.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>19.</td>
+                        <td>
+                            Write a Java program to insert an element (on a specific position) into Multidimensional array.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>20.</td>
+                        <td>
+                            Write a program to perform following operations on strings:<br>
+                            1) Compare two strings.<br>
+                            2) Count string length.<br>
+                            3) Convert upper case to lower case & vice versa.<br>
+                            4) Concatenate two strings.<br>
+                            5) Print a substring.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>21.</td>
+                        <td>
+                            Developed Program & design a method to find the smallest number among three numbers.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>22.</td>
+                        <td>
+                            Compute the average of three numbers through a Java Program.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>23.</td>
+                        <td>
+                            Write a Program & design a method to count all vowels in a string.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>24.</td>
+                        <td>
+                            Write a Java method to count all words in a string.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>25.</td>
+                        <td>
+                            Write a method in Java program to count all words in a string.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>26.</td>
+                        <td>
+                            Write a Java program to handle following exceptions:<br>
+                            1) Divide by Zero Exception.<br>
+                            2) Array Index Out Of B bound Exception.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>27.</td>
+                        <td>
+                            To represent the concept of Multithreading write a Java program
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>28.</td>
+                        <td>
+                            To represent the concept of all types of inheritance supported by Java, design a program.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>29.</td>
+                        <td>
+                            Write a program to implement Multiple Inheritance using interface.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>30.</td>
+                        <td>
+                            Construct a program to design a package in Java
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>31.</td>
+                        <td>
+                            To write and read a plain text file, write a Java program.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>32.</td>
+                        <td>
+                            Write a Java program to append text to an existing file
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>33.</td>
+                        <td>
+                            Design a program in Java to get a list of all file/directory names from the given
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>34.</td>
+                        <td>
+                            Develop a Java program to check if a file or directory specified by pathname exists or not.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>35.</td>
+                        <td>
+                            Write a Java program to check if a file or directory has read and write permission.
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="sec8" class="sec">
+                <!-- CG LAB -->
+                <h1>Computer Graphics Laboratory</h1>
+                <br>
+                <table>
+                    <tr>
+                        <td>Sno.</td>
+                        <td>Content</td>
+                    </tr>
+                    <tr>
+                        <td>1.</td>
+                        <td>
+                            Use of basic functions of graphic available like circle, putpixel, rectangle, arc, ellipse, floodfill, setcolor etc.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>
+                            Design a logo/poster using primitive functions.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td>
+                            Draw a 3 D object using palettes.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4.</td>
+                        <td>
+                            Line Drawing Algorithm : Direct method and DDA
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5.</td>
+                        <td>
+                            Bresenham's Line Drawing Algorithm
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6.</td>
+                        <td>
+                            Circle Generating Algorithm : Equation and trigonometric function.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>7.</td>
+                        <td>
+                            Bresenham's Circle Generating Algorithm
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>8.</td>
+                        <td>
+                            Draw an ellipse using Midpoint Algorithm.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>9.</td>
+                        <td>
+                            Translation transformation on a polygon.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10.</td>
+                        <td>
+                            Scaling transformation on a polygon.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>11.</td>
+                        <td>
+                            Rotation transformation on a polygon.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>12.</td>
+                        <td>
+                            Reflection transformation on a polygon.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>13.</td>
+                        <td>
+                            Shearing transformation on a polygon.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>14.</td>
+                        <td>
+                            Mixed transformation on an object
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>15.</td>
+                        <td>
+                            Minor project (eg Game/ Animation etc.)
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="sec9" class="sec">
+                <!-- DWM LAB -->
+                <h1>Data Warehouse and Mining Laboratory</h1>
+                <br>
+                <table>
+                    <tr>
+                        <td><h2>Sno.</h2></td>
+                        <td><h2>Content</h2></td>
+                    </tr>
+                    <tr>
+                        <td>1.</td>
+                        <td>
+                            Introduction to WEKA and R tools.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>
+                            Installation of Weka / R Tool.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td>
+                            Introduction to various components of WEKA / R tool.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4.</td>
+                        <td>
+                            Fundamental programming using WEKA / R tool.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5.</td>
+                        <td>
+                            Implementing data preprocessing.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6.</td>
+                        <td>
+                            Implementing apriori algorithm.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>7.</td>
+                        <td>
+                            Implementing classification using decision tree.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>8.</td>
+                        <td>
+                            Implementing classification using decision tree induction.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>9.</td>
+                        <td>
+                            Implementation k-mean clustering
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10.</td>
+                        <td>
+                            Implementing different Data visualization tools.
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+
+    </body>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</html>
